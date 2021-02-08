@@ -3,7 +3,7 @@
 require __DIR__ . "/vendor/autoload.php";
 
 function sameName ($person1, $person2) {
-    return $result = $person1["name"] === $person2["name"] ? true : false;
+    return $person1["name"] === $person2["name"] ? true : false;
     
 };
 
