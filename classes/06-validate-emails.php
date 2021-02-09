@@ -6,12 +6,11 @@ class Validator
 {
     public function email($email)
     {
-        return (preg_match("/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}/", $email) === 1);
-        
+        return filter_var($email, FILTER_VALIDATE_EMAIL) === $email;
     }
     public function postcode($postcode)
     {
-        return (preg_match("/([Gg][Ii][Rr] 0[Aa]{2})|((([A-Za-z][0-9]{1,2})|(([A-Za-z][A-Ha-hJ-Yj-y][0-9]{1,2})|(([A-Za-z][0-9][A-Za-z])|([A-Za-z][A-Ha-hJ-Yj-y][0-9][A-Za-z]?))))\s?[0-9][A-Za-z]{2})/", $postcode) === 1);
+        return (preg_match("/^[A-Z][A-Z0-9]{2,3} [0-9][A-Z]{2}$/", $postcode) === 1);
     }
 }
 
