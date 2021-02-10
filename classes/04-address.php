@@ -17,15 +17,15 @@ class Address
 
     public function setStreet($street)
     {
-        return $this->street = $street;
+        $this->street = $street;
     }
     public function setPostcode($postcode)
     {
-        return $this->postcode = $postcode;
+        $this->postcode = $postcode;
     }
     public function setTown($town)
     {
-        return $this->town = $town;
+        $this->town = $town;
     }
     public function fullAddress()
     {
