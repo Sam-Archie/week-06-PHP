@@ -1,28 +1,29 @@
 <?php
-
+declare(strict_types=1);
 require __DIR__ . "/vendor/autoload.php";
 
  class Phone
 {
-    private $model;
-    private $make;
+    private string $model;
+    private string $make;
     
-    public function __construct($make, $model)
+    public function __construct(string $make, string $model)
     {
         $this->model = $model;
         $this->make = $make;
     }
 
-    public function model()
+    public function model() : string
     {
         return $this->model;
     }
 
-    public function make()
+    public function make() : string
     {
         return $this->make;
     }
 }
+
 
 // create three phones
 $iPhone = new Phone("Apple", "iPhone XS");
