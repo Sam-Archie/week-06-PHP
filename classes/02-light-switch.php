@@ -4,19 +4,19 @@ require __DIR__ . "/vendor/autoload.php";
 
 class LightSwitch
 {
-    private $isOn = false;
+    private bool $isOn = false;
 
-    public function isOn()
+    public function isOn() : bool
     {
         return $this->isOn;
     }
 
-    public function turnOn()
+    public function turnOn() : bool
     {
         return $this->isOn = true;
     }
 
-    public function turnOff()
+    public function turnOff() : bool
     {
         return $this->isOn = false;
     }

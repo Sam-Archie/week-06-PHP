@@ -1,24 +1,27 @@
 <?php
 
+
 namespace App\Cooking;
+
+use Illuminate\Support\Collection;
 
 class Ingredient
 {
-    private $dietryInfo;
-    private $name;
+    private Collection $dietryInfo;
+    private string $name;
 
-    public function __construct($name, $dietryInfo)
+    public function __construct(string $name, array $dietryInfo)
     {
         $this->dietryInfo = collect($dietryInfo);
         $this->name = $name;
     }
 
-    public function name()
+    public function name() : string
     {
         return $this->name;
     }
 
-    public function vegan()
+    public function vegan() : bool
     {
         return !$this->dietryInfo->contains("animal produce");
     }

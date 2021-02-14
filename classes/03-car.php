@@ -4,31 +4,31 @@ require __DIR__ . "/vendor/autoload.php";
 
 class Car
 {
-    private $make;
-    private $Numberplate;
-    private $Mileage = 0;
+    private string $make;
+    private string $Numberplate;
+    private int $Mileage = 0;
 
-    public function __construct($make, $Numberplate)
+    public function __construct(string $make, string $Numberplate)
     {
         $this->make = $make;
         $this->Numberplate = $Numberplate;
     }
 
-    public function addJourney($miles)
+    public function addJourney(int $miles)
     {
         $this->Mileage += $miles;
     }
 
-    public function getMileage()
+    public function getMileage() : int
     {
         return $this->Mileage;
     }
 
-    public function getNumberplate()
+    public function getNumberplate() : string
     {
         return $this->Numberplate;
     }
-    public function getMake()
+    public function getMake() : string
     {
         return $this->make;
     }

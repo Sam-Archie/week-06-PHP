@@ -4,16 +4,17 @@ namespace App\Stuff\Things;
 
 class Potato {
 
-    private $waterCount = 0;
-    private $hasGrown = false;
+    private int $waterCount = 0;
+    private bool $hasGrown = false;
 
-    public function water() {
+    public function water() : void
+    {
         $this->waterCount += 1;
     }
 
-    public function hasGrown() {
+    public function hasGrown() : bool
+    {
         return $this->waterCount < 5 ? false : true;
-  
     }
 
 }

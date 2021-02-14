@@ -4,30 +4,30 @@ require __DIR__ . "/vendor/autoload.php";
 
 class Address
 {
-    private $town;
-    private $postcode;
-    private $street;
+    private string $town;
+    private string $postcode;
+    private string $street;
 
-    public function __construct($street, $town, $postcode)
+    public function __construct(string $street, string $town, string $postcode)
     {
         $this->street = $street;
         $this->town = $town;
         $this->postcode = $postcode;
     }
 
-    public function setStreet($street)
+    public function setStreet($street) : void
     {
         $this->street = $street;
     }
-    public function setPostcode($postcode)
+    public function setPostcode($postcode) : void
     {
         $this->postcode = $postcode;
     }
-    public function setTown($town)
+    public function setTown($town) : void
     {
         $this->town = $town;
     }
-    public function fullAddress()
+    public function fullAddress() : string
     {
         return "{$this->street}, {$this->town}, {$this->postcode}";
     }

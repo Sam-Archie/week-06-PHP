@@ -4,29 +4,29 @@ require __DIR__ . "/vendor/autoload.php";
 
 class Stringy
 {
-    private $string;
-    private $repeated = "";
-    public function __construct($string)
+    private string $string;
+    private string $repeated = "";
+    public function __construct(string $string)
     {
         $this->string = $string;
     }
 
-    public function lower()
+    public function lower() : string
     {
         return strtolower($this->string);
     }
 
-    public function upper()
+    public function upper() : string
     {
         return strtoupper($this->string);
     }
 
-    public function append($string)
+    public function append($string) : string
     {
         return "{$this->string}{$string}";
     }
 
-    public function repeat($value)
+    public function repeat(int $value) : string
     {
         for($i = 0; $i < $value; $i += 1)
         {
